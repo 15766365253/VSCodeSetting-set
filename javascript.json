@@ -1,0 +1,95 @@
+{
+	/*
+		 // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+		 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+		 // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+		 // same ids are connected.
+		 // Example:
+		 "Print to console": {
+			"prefix": "log",
+			"body": [
+				"console.log('$1');",
+				"$2"
+			],
+			"description": "Log output to console"
+		}
+	*/
+	"my_ajax_header": {
+		"prefix": "my_ajax_header",
+		"body": [
+			"$1.setRequestHeader(\"Content-type\",\"application/x-www-form-urlencoded\");"
+		],
+		"description": "设置ajax中post的请求头"
+	},
+	"my_log": {
+		"prefix": "my_log",
+		"body": [
+			"console.log($1);"
+		],
+		"description": "快速创建log"
+	},
+	"my_zs": {
+		"prefix": "my_zs",
+		"body": [
+			"/**",
+			" * $0",
+			" */"
+		],
+		"description": "快速创建注释"
+	},
+	"my_ajax_5steps_normal": {
+		"prefix": "my_ajax_5steps_normal",
+		"body": [
+			"//AJAX2.0的步骤:",
+			"//1.创建对象",
+			"//var xhr = new XMLHttpRequest()",
+			"//2.设置请求行(get请求数据写在url后面,2.0只能用POST)",
+			"//open('post', '后台地址')",
+			"//3.设置请求头(get请求可以省略,post不发送数据也可以省略2.0可以省略)",
+			"//xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')",
+			"//3.5注册回调函数 获取元素必须带有name属性",
+			"//xhr.onload = function(){}",
+			"//4.请求主体发送(get请求为空，或者写null，post请求数据写在这里，如果没有数据，直接为空或者写null)",
+			"//xhr.send(formData)"
+		],
+		"description": "快速生成ajax2.0五步使用注释"
+	},
+	"my_qs": {
+		"prefix": "my_qs",
+		"body": [
+			"document.querySelector('$1')"
+		],
+		"description": "快速生成QS"
+	},
+	"my_qsa": {
+		"prefix": "my_qsa",
+		"body": [
+			"document.querySelectorAll('$1')"
+		],
+		"description": "快速生成QSA"
+	},
+	"my_ajax_JQ": {
+		"prefix": "my_ajax_JQ",
+		"body": [
+			"var formData = new FormData() //上传文件需要的对象",
+			"$.ajax({",
+					"url:'需要传入的地址(php文件)',",
+					"data:'name='+$(''), //需要传输的值",
+					"type:'get或者post',",
+					"contentType: false, //JQuery 内部不帮助我们设置请求头",	
+		 			"processData: false, //不去格式化发送数据",
+					"success:function(data){},error:function(){} //回调函数",
+			"})"
+		],
+		"description": "快速生成JQ AJAX"
+	},
+	"my_node": {
+		"prefix": "my_node",
+		"body": [
+			"res.writeHead(200,{'Content-Type':'text/html或者plain(是普通文本);charset=utf-8'});"
+		],
+		"description": "快速生成nodejs的请求头"
+	}
+	
+	
+}
